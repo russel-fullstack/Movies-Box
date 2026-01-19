@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies-Box</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" fill="orangered"
-            viewBox="0 0 640 640">
-            <path
-                d="M96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM144 432L144 464C144 472.8 151.2 480 160 480L192 480C200.8 480 208 472.8 208 464L208 432C208 423.2 200.8 416 192 416L160 416C151.2 416 144 423.2 144 432zM448 416C439.2 416 432 423.2 432 432L432 464C432 472.8 439.2 480 448 480L480 480C488.8 480 496 472.8 496 464L496 432C496 423.2 488.8 416 480 416L448 416zM144 304L144 336C144 344.8 151.2 352 160 352L192 352C200.8 352 208 344.8 208 336L208 304C208 295.2 200.8 288 192 288L160 288C151.2 288 144 295.2 144 304zM448 288C439.2 288 432 295.2 432 304L432 336C432 344.8 439.2 352 448 352L480 352C488.8 352 496 344.8 496 336L496 304C496 295.2 488.8 288 480 288L448 288zM144 176L144 208C144 216.8 151.2 224 160 224L192 224C200.8 224 208 216.8 208 208L208 176C208 167.2 200.8 160 192 160L160 160C151.2 160 144 167.2 144 176zM448 160C439.2 160 432 167.2 432 176L432 208C432 216.8 439.2 224 448 224L480 224C488.8 224 496 216.8 496 208L496 176C496 167.2 488.8 160 480 160L448 160z" />
-        </svg>
+        <div class="movie">
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" fill="orangered"
+                viewBox="0 0 640 640">
+                <path
+                    d="M96 160C96 124.7 124.7 96 160 96L480 96C515.3 96 544 124.7 544 160L544 480C544 515.3 515.3 544 480 544L160 544C124.7 544 96 515.3 96 480L96 160zM144 432L144 464C144 472.8 151.2 480 160 480L192 480C200.8 480 208 472.8 208 464L208 432C208 423.2 200.8 416 192 416L160 416C151.2 416 144 423.2 144 432zM448 416C439.2 416 432 423.2 432 432L432 464C432 472.8 439.2 480 448 480L480 480C488.8 480 496 472.8 496 464L496 432C496 423.2 488.8 416 480 416L448 416zM144 304L144 336C144 344.8 151.2 352 160 352L192 352C200.8 352 208 344.8 208 336L208 304C208 295.2 200.8 288 192 288L160 288C151.2 288 144 295.2 144 304zM448 288C439.2 288 432 295.2 432 304L432 336C432 344.8 439.2 352 448 352L480 352C488.8 352 496 344.8 496 336L496 304C496 295.2 488.8 288 480 288L448 288zM144 176L144 208C144 216.8 151.2 224 160 224L192 224C200.8 224 208 216.8 208 208L208 176C208 167.2 200.8 160 192 160L160 160C151.2 160 144 167.2 144 176zM448 160C439.2 160 432 167.2 432 176L432 208C432 216.8 439.2 224 448 224L480 224C488.8 224 496 216.8 496 208L496 176C496 167.2 488.8 160 480 160L448 160z" />
+            </svg>
+            <p>MoviesBox</p>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -23,69 +27,100 @@
         </nav>
         <button class="connexion">Connexion</button>
     </header>
+    <div class="menu-bottom">
+        <div class="link">
+            <span>🏠</span>
+            <p>Accueil</p>
+        </div>
+        <div class="link">
+            <span>🔍</span>
+            <p>Recherche</p>
+        </div>
+        <div class="link">
+            <span>🛒</span>
+            <p>Téléchargements</p>
+        </div>
+        <div class="link">
+            <span>🏠</span>
+            <p>Profil</p>
+        </div>
+    </div>
     <section class="title" >
-        <p style="font-size: 55px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bold;">Skyscraper</p>
-        <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 75px;"> Au-delà des Nuages</h1>
-        <button  
-        type="button"
-        title="Voir la fiche du film"
-        aria-label="button permettant de voir la fiche"
-        > Voir fiche</button>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/home-01-avengers.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/home-02-skyscraper.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./images/home-03-mortal-kombat.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="content">
+            <p style=" font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: bold;">Skyscraper</p>
+            <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> Au-delà des Nuages</h1>
+            <button  
+            type="button"
+            title="Voir la fiche du film"
+            aria-label="button permettant de voir la fiche"
+            > Voir fiche</button>
+        </div>
     </section>
     <div class="container" id="films">
         <div class="text">
-            <h2 style="font-size: 40px;  color: white; padding-bottom: 20px; font-weight: 300;">Les plus populaires</h2>
+            <h2 style="color: white;font-weight: 300;">🔥 Les plus populaires</h2>
             <hr>
         </div>
+
+  <!-- Swiper JS -->
+  
         <div class="gallery">
             <div class="gallery-item">
-                <img src="./images/film-01.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-01.jpg" alt="Movie 1" >
                 <h3>Aquaman</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item">
-                <img src="./images/film-02.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-02.jpg" alt="Movie 1" >
                 <h3>Black Panther</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item">
-                <img src="./images/film-03.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-03.jpg" alt="Movie 1" >
                 <h3>Avengers</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item">
-                <img src="./images/film-04.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-04.jpg" alt="Movie 1" >
                 <h3>Spider-Man</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item">
-                <img src="./images/film-05.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-05.jpg" alt="Movie 1" >
                 <h3>Shang-Chi</h3>
                 <p>140min-action</p>
             </div>
             
             <div class="gallery-item">
-                <img src="./images/film-06.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-06.jpg" alt="Movie 1" >
                 <h3>Thor</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item">
-                <img src="./images/film-07.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-07.jpg" alt="Movie 1" >
                 <h3>Quantumania</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item">
-                <img src="./images/film-08.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-08.jpg" alt="Movie 1" >
                 <h3>Black Widow</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item">
-                <img src="./images/film-09.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-09.jpg" alt="Movie 1" >
                 <h3>Harry Potter</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item">
-                <img src="./images/film-10.jpg" alt="Movie 1" height="350px">
+                <img src="./images/film-10.jpg" alt="Movie 1" >
                 <h3>Harry Potter</h3>
                 <p>140min-action</p>
             </div>
@@ -93,98 +128,101 @@
 </div>
     <div class="container_1" id="prochain">
         <div class="text">
-            <h2 style="font-size: 35px;  color: white; padding-bottom: 20px; font-weight: 300;">PROCHAINEMENT</h2>
+            <h2 style="color: white; padding-bottom: 20px; font-weight: 300;">🔥 Prochainement</h2>
             <hr>
         </div>
 
         <div class="gallery_1">
             <div class="gallery-item_1">
-                <img src="./images/m-1.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-1.jpg" alt="Movie 1" >
                 <h3>Harry Potter</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/m-2.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-2.jpg" alt="Movie 1" >
                 <h3>Mercredi</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/m-3.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-3.jpg" alt="Movie 1" >
                 <h3>Scream IV</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/m-4.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-4.jpg" alt="Movie 1" >
                 <h3>The last Of US</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/m-5.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-5.jpg" alt="Movie 1" >
                 <h3>Babylon</h3>
                 <p>140min-action</p>
             </div>
 
             <div class="gallery-item_1">
-                <img src="./images/m-6.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-6.jpg" alt="Movie 1" >
                 <h3>Super Mario</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/m-7.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-7.jpg" alt="Movie 1" >
                 <h3>Blood</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/m-8.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-8.jpg" alt="Movie 1" >
                 <h3>Barbie</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/m-9.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-9.jpg" alt="Movie 1" >
                 <h3>Miraculous</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/m-10.jpg" alt="Movie 1" height="450px">
+                <img src="./images/m-10.jpg" alt="Movie 1" >
                 <h3>Une Année Difficile</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/film-06.jpg" alt="Movie 1" height="450px">
+                <img src="./images/film-06.jpg" alt="Movie 1" >
                 <h3>Thor</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/film-07.jpg" alt="Movie 1" height="450px">
+                <img src="./images/film-07.jpg" alt="Movie 1" >
                 <h3>Quantumania</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/film-08.jpg" alt="Movie 1" height="450px">
+                <img src="./images/film-08.jpg" alt="Movie 1" >
                 <h3>Black Widow</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/film-09.jpg" alt="Movie 1" height="450px">
+                <img src="./images/film-09.jpg" alt="Movie 1" >
                 <h3>Harry Potter</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/film-10.jpg" alt="Movie 1" height="450px">
+                <img src="./images/film-10.jpg" alt="Movie 1" >
                 <h3>Harry Potter</h3>
                 <p>140min-action</p>
             </div>
             <div class="gallery-item_1">
-                <img src="./images/film-05.jpg" alt="Movie 1" height="450px">
+                <img src="./images/film-05.jpg" alt="Movie 1" >
                 <h3>Shang-Chi</h3>
                 <p>140min-action</p>
             </div>
         </div>
+        
     </div>
     <section class="inscription" id="newsletter">
         <p>Inscrivez-vous à la <span style="color: orangered; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">newsletter</span></p>
-        <input type="email" placeholder="Indiquez votre e-mail">
-        <button>S'inscrire</button>
+        <form >
+            <input type="email" placeholder="Indiquez votre e-mail">
+            <button>S'inscrire</button>
+        </form>
     </section>
     <div class="line"><hr></div>
     <footer>
@@ -212,5 +250,40 @@
         </div>
     </footer>
         <P style="text-align: center; background-color: black; color: white; font-size: 25px; padding-bottom: 25px;">&copy;2025 - evarosto - Tous droits réservés</P>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+<!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".container", {
+      direction: "horizontal",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      mousewheel: true,
+      pagination: {
+        el: ".pagination",
+        clickable: true,
+      },
+    });
+  </script>
 <body>
 </html>
