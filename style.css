@@ -13,7 +13,8 @@ body{
 header{
     display: flex;
     justify-content: space-around;
-    background-color: black;    
+    background-color: black;
+    box-shadow: 0 0 10px orangered;    
     padding: 20px 0;
     align-items: center;
     position: sticky;
@@ -121,7 +122,6 @@ section h1{
 .container{
     padding-top: 100px;
     background-color: black;
-    margin: 0 20px;
 }
 .container .text{
     padding: 20px 50px;
@@ -137,14 +137,11 @@ section h1{
 .gallery{
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 20px;
-    margin:0 40px 0 40px;
-}
-.gallery::-webkit-scrollbar {
-    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0px 45px;
+    margin-bottom: 30px;
 }
 .gallery-item:hover img{
     transform: scaleX(-1);
@@ -193,7 +190,7 @@ section h1{
     color: white;
 }
 .gallery-item_1 p{
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     font-size: 20px;
     color: white;
 }
@@ -280,14 +277,22 @@ section h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
 }
+.inscription form{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 43%;
+    background-color: white;
+}
 .inscription input{
-    padding: 25px 150px 25px 20px;
-    font-size: 25px;
+    font-size: 24px;
     text-align: left;
     border-radius: 8px;
     border: none;
     position: relative;
-    width: 43vw;
+    width: 43%;
 }
 .inscription p{
     font-size: 40px;
@@ -299,12 +304,9 @@ section h1{
     font-size: 20px;
     font-weight: bold;
     border-radius: 12px;
-    border: none;
+    border: 1px solid orangered;
     color: white;
     background-color: orangered;
-    position: absolute;
-    right: 410px;
-    bottom: -145.3rem;
 }
 .inscription button:hover{
     color: orangered;
@@ -326,9 +328,16 @@ footer{
     justify-content: space-between;
     align-items: center;
     color: orangered;
-    padding-top: 30px;
-    padding-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 
+}
+.end{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    padding-bottom: 25px;
 }
 .container .text h2 {
     font-size: 40px;
@@ -361,7 +370,9 @@ footer{
       font-size: 55px;
   }
 
-@media(max-width: 550px){
+  /* Responsive mobile  */
+
+@media(max-width: 640px){
     header nav ul {
         display: none;
     }
@@ -407,6 +418,7 @@ footer{
     }
     .container .text {
         padding: 0px 20px;
+        margin: 0 20px;
     }
 
     .container .text h2 {
@@ -443,12 +455,17 @@ footer{
     }
 
     .gallery-item p {
-        padding-bottom: 10px;
+        padding-bottom: 20px;
         font-size: 14px;
     }
     .gallery {
         gap: 10px;
-        margin: 0 20px;
+        padding: 0;
+        margin: 0 24px;
+        display: flex;
+        justify-content: start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
     }
     .gallery-item_1 {
         flex: 0 0 10em;
@@ -511,5 +528,629 @@ footer{
     .gallery-item_1 img {
         height: 300px;
     }
+    .inscription {
+        padding: 60px 0;
+    }
 
+    .inscription form {
+        padding: 10px;
+        border-radius: 12px;
+        width: 60%;
+    }
+
+    .inscription input {
+        font-size: 12px;
+        border-radius: 8px;
+        border: none;
+        position: relative;
+        width: 60%;
+    }
+
+    .inscription p {
+        font-size: 24px;
+        padding-bottom: 40px;
+        right: 20px;
+    }
+
+    .inscription button {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .line {
+        padding: 0px 24px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .line hr {
+        border: 1px solid orangered;
+    }
+    footer {
+        padding-top: 30px;
+        padding-bottom: 40px;
+
+    }
+
+}
+
+/* Responsive Tablets */
+
+@media(max-width: 768px){
+    header nav ul {
+        display: none;
+    }
+    .menu-bottom{
+        visibility: visible;
+    }
+    header button {
+        padding: 12px 10px;
+        font-size: 14px;
+        color: white;
+        background-color: orangered;
+        border-radius: 12px;
+        border: none;
+    }
+    .title {
+        height: 330px;
+        color: white;
+    }
+    .content {
+        z-index: 88;
+        position: absolute;
+        top: 13%;
+        left: 30px;
+    }
+    .content h1{
+        font-size: 32px;
+    }
+    .content p{
+        font-size: 32px;
+    }
+    .container {
+        padding-top: 50px;
+    }
+    .container .text {
+        padding: 0px 20px;
+        margin: 0 20px;
+    }
+
+    .container .text h2 {
+        font-size: 24px;
+        padding: 20px 0 5px 0;
+    }
+
+    .container .text hr {
+        width: 100%;
+        border: 1px solid orangered;
+        margin-bottom: 20px;
+    }
+    .container_1 .text {
+        padding: 20px 35px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 24px;
+
+    }
+    .movie p {
+        font-weight: bold;
+        font-size: 16px;
+        visibility: visible;
+    }
+    .gallery-item img {
+        height: 250px;
+    }
+
+    .gallery-item h3 {
+        padding-top: 10px;
+        font-size: 15px;
+    }
+
+    .gallery-item p {
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+    .gallery {
+        gap: 10px;
+        padding: 0;
+        margin: 0 24px;
+        display: flex;
+        justify-content: start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    .gallery-item_1 {
+        flex: 0 0 10em;
+        scroll-behavior: smooth;
+        scroll-snap-align: start;
+    }
+
+    .gallery-item_1::scroll-marker {
+        content: "";
+        height: .5em;
+        width: .5em;
+        background-color: rgba(173, 169, 169, 0.658);
+        border-radius: 50%;
+    }
+    .gallery-item_1 h3 {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .gallery-item_1 p {
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .container_1 {
+        padding-top: 30px;
+    }
+
+
+    .container_1 .text hr {
+        border: 1px solid orangered;
+        margin-bottom: 20px;
+    }
+    .container_1 .text h2 {
+        font-size: 24px;
+        padding: 20px 0 5px 0;
+    }
+
+    .gallery_1 {
+        gap: 10px;
+        margin: 0 30px 30px 30px;
+    }
+
+    .gallery_1::scroll-marker-group {
+        gap: .2em;
+    }
+
+    .gallery_1::scroll-button(left) {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+        
+    }
+
+    .gallery_1::scroll-button(right) {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+    }
+    .gallery-item_1 img {
+        height: 300px;
+    }
+    .inscription {
+        padding: 60px 0;
+    }
+
+    .inscription form {
+        padding: 10px;
+        border-radius: 12px;
+        width: 60%;
+    }
+
+    .inscription input {
+        font-size: 12px;
+        border-radius: 8px;
+        border: none;
+        position: relative;
+        width: 60%;
+    }
+
+    .inscription p {
+        font-size: 24px;
+        padding-bottom: 40px;
+        right: 20px;
+    }
+
+    .inscription button {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .line {
+        padding: 0px 24px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .line hr {
+        border: 1px solid orangered;
+    }
+    footer {
+        margin-top: 0;
+
+    }
+
+}
+
+/* Responsive Tablets Paysages  */
+@media(max-width: 900px){
+    header nav ul{
+        gap: 30px;
+        font-size: 17px;
+    }
+    header button {
+        padding: 12px 10px;
+        font-size: 14px;
+        color: white;
+        background-color: orangered;
+        border-radius: 12px;
+        border: none;
+    }
+    .title {
+        height: 330px;
+        color: white;
+    }
+    .content {
+        z-index: 88;
+        position: absolute;
+        top: 10%;
+        left: 30px;
+    }
+    .content h1{
+        font-size: 32px;
+    }
+    .content p{
+        font-size: 32px;
+    }
+    .container {
+        padding-top: 50px;
+    }
+    .container .text {
+        padding: 0px 20px;
+        margin: 0 20px;
+    }
+
+    .container .text h2 {
+        font-size: 24px;
+        padding: 20px 0 5px 0;
+    }
+
+    .container .text hr {
+        width: 100%;
+        border: 1px solid orangered;
+        margin-bottom: 20px;
+    }
+    .container_1 .text {
+        padding: 20px 35px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 24px;
+
+    }
+    .movie p {
+        font-weight: bold;
+        font-size: 16px;
+        visibility: visible;
+    }
+    .gallery-item img {
+        height: 250px;
+    }
+
+    .gallery-item h3 {
+        padding-top: 10px;
+        font-size: 15px;
+    }
+
+    .gallery-item p {
+        font-size: 14px;
+    }
+    .gallery {
+        gap: 10px;
+        padding: 0;
+        /* margin: 0 24px; */
+        display: flex;
+        justify-content: start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    .gallery-item_1 {
+        flex: 0 0 10em;
+        scroll-behavior: smooth;
+        scroll-snap-align: start;
+    }
+
+    .gallery-item_1::scroll-marker {
+        content: "";
+        height: .5em;
+        width: .5em;
+        background-color: rgba(173, 169, 169, 0.658);
+        border-radius: 50%;
+    }
+    .gallery-item_1 h3 {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .gallery-item_1 p {
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .container_1 {
+        padding-top: 30px;
+    }
+
+
+    .container_1 .text hr {
+        border: 1px solid orangered;
+        margin-bottom: 20px;
+    }
+    .container_1 .text h2 {
+        font-size: 24px;
+        padding: 20px 0 5px 0;
+    }
+
+    .gallery_1 {
+        gap: 10px;
+        /* margin: 0 30px 30px 30px; */
+    }
+
+    .gallery_1::scroll-marker-group {
+        gap: .2em;
+    }
+
+    .gallery_1::scroll-button(left) {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+        
+    }
+
+    .gallery_1::scroll-button(right) {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+    }
+    .gallery-item_1 img {
+        height: 300px;
+    }
+    .inscription {
+        padding: 60px 0;
+    }
+
+    .inscription form {
+        padding: 10px;
+        border-radius: 12px;
+        width: 60%;
+    }
+
+    .inscription input {
+        font-size: 12px;
+        border-radius: 8px;
+        border: none;
+        position: relative;
+        width: 60%;
+    }
+
+    .inscription p {
+        font-size: 24px;
+        padding-bottom: 40px;
+        right: 20px;
+    }
+
+    .inscription button {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .line {
+        padding: 0px 24px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .line hr {
+        border: 1px solid orangered;
+    }
+    footer {
+        padding-top: 30px;
+        padding-bottom: 20px;
+
+    }
+    .end {
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+
+}
+@media(max-width: 1100px){
+    header nav ul {
+        gap: 30px;
+        font-size: 20px;
+    }
+    header button {
+        padding: 12px 10px;
+        font-size: 14px;
+        color: white;
+        background-color: orangered;
+        border-radius: 12px;
+        border: none;
+    }
+    .title {
+        height: 350px;
+        color: white;
+    }
+    
+    .content h1{
+        font-size: 32px;
+    }
+    .content p{
+        font-size: 32px;
+    }
+    .container {
+        padding-top: 50px;
+    }
+    .container .text {
+        padding: 0px 20px;
+        margin: 0 20px;
+    }
+
+    .container .text h2 {
+        font-size: 24px;
+        padding: 20px 0 5px 0;
+    }
+
+    .container .text hr {
+        width: 100%;
+        border: 1px solid orangered;
+        margin-bottom: 20px;
+    }
+    .container_1 .text {
+        padding: 20px 35px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 24px;
+
+    }
+    .movie p {
+        font-weight: bold;
+        font-size: 16px;
+        visibility: visible;
+    }
+    .gallery-item img {
+        height: 250px;
+    }
+
+    .gallery-item h3 {
+        padding-top: 10px;
+        font-size: 15px;
+    }
+
+    .gallery-item p {
+        font-size: 14px;
+    }
+    .gallery {
+        gap: 10px;
+        padding: 0;
+        margin: 0 24px;
+        display: flex;
+        justify-content: start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+    .gallery-item_1 {
+        flex: 0 0 10em;
+        scroll-behavior: smooth;
+        scroll-snap-align: start;
+    }
+
+    .gallery-item_1::scroll-marker {
+        content: "";
+        height: .5em;
+        width: .5em;
+        background-color: rgba(173, 169, 169, 0.658);
+        border-radius: 50%;
+    }
+    .gallery-item_1 h3 {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .gallery-item_1 p {
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .container_1 {
+        padding-top: 30px;
+    }
+
+
+    .container_1 .text hr {
+        border: 1px solid orangered;
+        margin-bottom: 20px;
+    }
+    .container_1 .text h2 {
+        font-size: 24px;
+        padding: 20px 0 5px 0;
+    }
+
+    .gallery_1 {
+        gap: 10px;
+        margin: 0 30px 30px 30px;
+    }
+
+    .gallery_1::scroll-marker-group {
+        gap: .2em;
+    }
+
+    .gallery_1::scroll-button(left) {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+        
+    }
+
+    .gallery_1::scroll-button(right) {
+        height: 40px;
+        width: 40px;
+        font-size: 14px;
+    }
+    .gallery-item_1 img {
+        height: 300px;
+    }
+    .inscription {
+        padding: 60px 0;
+    }
+
+    .inscription form {
+        padding: 10px;
+        border-radius: 12px;
+        width: 60%;
+    }
+
+    .inscription input {
+        font-size: 12px;
+        border-radius: 8px;
+        border: none;
+        position: relative;
+        width: 60%;
+    }
+
+    .inscription p {
+        font-size: 24px;
+        padding-bottom: 40px;
+        right: 20px;
+    }
+
+    .inscription button {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+
+    .line {
+        padding: 0px 24px;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .line hr {
+        border: 1px solid orangered;
+    }
+    footer {
+        padding-top: 30px;
+        padding-bottom: 20px;
+
+    }
+    .end {
+        font-size: 15px;
+        padding-bottom: 15px;
+    }
+
+}
+@media(max-width: 1300px){
+    .gallery-item img {
+        height: 300px;
+    }
+    .gallery-item p{
+        padding-bottom: 30px;
+    }
+    .container_1 {
+        padding-top: 30px;
+    }
 }
