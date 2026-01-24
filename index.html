@@ -18,33 +18,20 @@
             <p>MoviesBox</p>
         </div>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
+            <ul class="liste">
+                <li class="active"><a href="#">Home</a></li>
                 <li><a href="#films">Films</a></li>
                 <li><a href="#prochain">À venir</a></li>
                 <li><a href="#newsletter">Newsletter</a></li>
             </ul>
         </nav>
-        <button class="connexion">Connexion</button>
+        <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+            <div class="menu-burger" style="color: orangered; height: 24px; width: 24px; cursor: pointer;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+            </div>
+            <button class="connexion">Connexion</button>
+        </div>
     </header>
-    <div class="menu-bottom">
-        <div class="link">
-            <span>🏠</span>
-            <p>Accueil</p>
-        </div>
-        <div class="link">
-            <span>🔍</span>
-            <p>Recherche</p>
-        </div>
-        <div class="link">
-            <span>🛒</span>
-            <p>Téléchargements</p>
-        </div>
-        <div class="link">
-            <span>🏠</span>
-            <p>Profil</p>
-        </div>
-    </div>
     <section class="title" >
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -64,6 +51,14 @@
             > Voir fiche</button>
         </div>
     </section>
+    <div class="menu-caché remov">
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#films">Films</a></li>
+            <li><a href="#prochain">À venir</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+    </div>
     <div class="container" id="films">
         <div class="text">
             <h2 style="color: white;font-weight: 300;">🔥 Les plus populaires</h2>
@@ -272,18 +267,6 @@
       },
     });
   </script>
-<!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".container", {
-      direction: "horizontal",
-      slidesPerView: 1,
-      spaceBetween: 30,
-      mousewheel: true,
-      pagination: {
-        el: ".pagination",
-        clickable: true,
-      },
-    });
-  </script>
+  <script src="./script.js"></script>
 <body>
 </html>

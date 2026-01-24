@@ -31,9 +31,62 @@ header{
     color: white;
     visibility: hidden;
 }
+.remov{
+   display: none;
+}
+.menu-burger{
+    display: block;
+}
+.menu-caché{
+    position: fixed;
+    height: 300px;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    z-index: 99;
+    padding: 60px 0 20px 0;
+    background-color: black;
+    transition: 2s ease;
+}
+.menu-caché ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    gap: 30px;
+}
+.menu-caché ul li a{
+    color: white;
+    padding: 2px 0;
+    position: relative;
+}
+.menu-caché ul li a::after{
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: orangered;
+    transition: all 0.5s ease;
 
+}
+.menu-caché ul li a:hover::after{
+    width: 100%;
+    color: orangered;
+}
+.active{
+    background-color: orangered;
+    padding: 10px;
+    border-radius: 12px;
+    color: white;
+}
 header nav ul{
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 75px;
     font-size: 24px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -53,7 +106,7 @@ header nav ul li a::after{
     transition: all 0.5s ease;
 
 }
-header nav ul li a:hover,header nav ul li a:hover::after{
+header nav ul li a:hover::after{
     width: 100%;
     color: orangered;
 }
@@ -343,20 +396,7 @@ footer{
     font-size: 40px;
     text-transform: capitalize;
 }
-.menu-bottom{
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 20px 25px;
-    background-color: black;
-    font-size: 14px;
-    z-index: 100;
-    visibility: hidden;
-}
+
 .link{
     display: flex;
     flex-direction: column;
@@ -373,11 +413,12 @@ footer{
   /* Responsive mobile  */
 
 @media(max-width: 640px){
+    
     header nav ul {
         display: none;
     }
-    .menu-bottom{
-        visibility: visible;
+    header{
+        justify-content: space-between;
     }
     header button {
         padding: 12px 10px;
@@ -579,9 +620,6 @@ footer{
     header nav ul {
         display: none;
     }
-    .menu-bottom{
-        visibility: visible;
-    }
     header button {
         padding: 12px 10px;
         font-size: 14px;
@@ -767,6 +805,7 @@ footer{
 
 /* Responsive Tablets Paysages  */
 @media(max-width: 900px){
+    
     header nav ul{
         gap: 30px;
         font-size: 17px;
@@ -1153,4 +1192,10 @@ footer{
     .container_1 {
         padding-top: 30px;
     }
+}
+
+@media(min-width: 768px){
+    .menu-burger {
+         display: none;
+     }
 }
